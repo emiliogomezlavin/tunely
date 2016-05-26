@@ -49,6 +49,12 @@ app.get('/api/albums', function albumsIndex(req, res) {
   });
 });
 
+app.post('/api/albums', function createAlbum (req, res) {
+  var album = req.body;   
+  console.log("hello");
+  res.json(album);
+});
+
 
 /**********
  * SERVER *

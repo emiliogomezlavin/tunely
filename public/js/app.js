@@ -43,10 +43,14 @@ $(document).ready(function() {
     albums.forEach(function(album) {
       renderAlbum(album);
     });
+  });
 
+  $('#new-album-form').submit(function(event) {
+    event.preventDefault();
+    var formData = $(this).serialize();
+    $(this).trigger('reset');  
   });
 });
-
 
 
 
